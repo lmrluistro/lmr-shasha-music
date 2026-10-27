@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100b18"><title>Admin — LMR × SHASHA</title><link rel="stylesheet" href="styles.css"></head>
+<body><header class="topbar"><a class="brand" href="index.html"><span class="brand-heart">♥</span><span>LMR <i>×</i> SHASHA<small>ADMIN STUDIO</small></span></a><a class="admin-link" href="index.html">← Music page</a></header>
+<main class="admin-main"><section class="hero admin-hero"><p class="eyebrow">YOUR PRIVATE MUSIC STUDIO</p><h1>Manage <span>our songs.</span></h1><p class="intro">Add a title, audio file, and cover art. For the shared live library, complete the Supabase setup in README.md first.</p></section>
+<div class="setup-notice"><strong>Setup status</strong><p id="setup-status">Demo mode: songs added here are stored only in this browser. Connect Supabase for a shared library and secure admin access.</p></div>
+<section class="admin-panel"><h2>Add a song</h2><form id="song-form" class="message-form">
+<label>Song title<input id="title" required maxlength="100" placeholder="e.g. Ikaw Lang, Shasha"></label>
+<label>Artist / subtitle<input id="artist" maxlength="100" placeholder="LMR ❤️ SHASHA"></label>
+<label>Audio file (MP3 recommended)<input id="audio-file" type="file" accept="audio/*" required></label>
+<label>Album cover (optional)<input id="cover-file" type="file" accept="image/*"></label>
+<button class="primary-btn" type="submit">＋ Add to playlist</button><p id="admin-status" class="form-status" role="status"></p>
+</form><p class="admin-help">Tip: compress cover images and use MP3 audio to help the mobile site load faster. Large files can use up free storage and bandwidth quickly.</p></section>
+<section class="admin-panel"><div class="message-title-row"><h3>Current songs</h3><span id="admin-count" class="count">0</span></div><div id="admin-songs" class="playlist"></div></section>
+<section class="admin-panel"><h2>Listener messages</h2><p class="admin-help">New public messages should be reviewed before approval. In connected mode, approve or delete messages below.</p><div id="admin-messages" class="messages-list"></div></section>
+</main><footer>PRIVATE ADMIN AREA • LMR × SHASHA</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="admin.js"></script></body></html>
